@@ -14,7 +14,7 @@ function App() {
         <TodoList />
       </div>
       <div>
-        <h1>Fetch</h1>
+        <h1>Fetch Users</h1>
         <UserList />
         <CreatePost />
       </div>
