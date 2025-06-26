@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 export default function UserList() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -9,9 +11,7 @@ export default function UserList() {
     const fetchUsers = async () => {
       try {
         setLoading(true);
-        const response = await fetch(
-          "https://jsonplaceholder.typicode.com/users"
-        );
+        const response = await fetch(API_URL);
         const data = await response.json();
         setUsers(data);
       } catch (error) {
